@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    main{ 
+        position: fixed;
+        width:600px;
+        height:200px;
+        left:50%;
+        top:50%;
+        border:1px solid black;
+        margin-left: -300px;
+        margin-top: -100px;
+        padding:20px;
+    }
+    a{
+        text-decoration: none;
+        color:black;        
+    }
+    #login-btn {
+        background-color: rgb(113,27,255);
+        width:100%;
+        height:60px;
+        color:white;
+        font-size:20px;
+        border-radius: 10px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    #login{
+        text-align: center;
+    }
+    .flex{
+        display: flex;                
+    }
+    .margin-top-30{
+        margin-top:30px;
+    }
+    .margin-left-04{
+        margin-left:4px;
+    }
+    .space-between{
+        justify-content: space-between;
+    }
+    .btn-set{
+        align-items:center;
+        display:flex;
+    }    
+    .btn-join{
+        justify-content: end;
+    }
+    .info-message{
+        font-size:20px;
+    }
+    .sr-only {
+    position:absolute;
+    left:-9999px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    }
+</style>
+</head>
+<body>
+    <!-- 메인 컨텐츠 -->
+    <main>
+        <!-- 제목용 태그 -->
+        <h1 class="sr-only">Weniv Login</h1>            
+        <p class="info-message">더 편리해진 위니브에 오신 것을 환영합니다.</p>
+        <!-- 세로정렬용 div -->
+        <div id="login">
+        <!-- 로그인버튼, 로고이미지와 글씨 -->
+            <button id="login-btn"><img src="./img/weniv-logo.png" alt="weniv logo"> 로그인</button>
+        </div>
+        <!-- 아이디와 비밀번호찾기 -->
+        <div class="flex space-between margin-top-30">
+            <div class="btn-set">
+                <img src="./img/icon-lock.png" alt="계정정보찾기 이미지"><a class="margin-left-04" href="#">아이디</a>|<a class="margin-left-04" href="#">비밀번호찾기</a>
+            </div>
+            <div class="btn-set btn-join">
+                <img src="./img/icon-user.png" alt="회원가입 이미지"><a href="#">회원가입</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
