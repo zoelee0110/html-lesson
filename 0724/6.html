@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습해보기</title>
+    <style>
+        /* 전체선택자 */
+        * {
+            color: red;
+            margin: 0;
+        }
+        /* 태그선택자 */
+        p {
+            color: blueviolet;
+        }
+        /* id로 지정 잘안씀 */
+        #T2 {
+            color: aquamarine;
+        }
+        /* class 지정 많이씀 */
+        .T3 {
+            color: cadetblue;
+        }
+        /* 포함 */
+        [class*='content'] {
+            outline: 2px solid gray;
+        }
+        /* 그룹 */
+        ul {
+            border: 2px solid green;
+        }
+    </style>
+  </head>
+  <body>
+    <h2 id="T2">단원</h2>
+    <h3 class="T3">제목</h3>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        <span class="content"> libero architecto beatae tenetur autem sapiente excepturi, 
+        quibusdam quisquam. </span>Amet odit soluta suscipit reprehenderit rem repellat aut 
+        voluptates aliquam laudantium repudiandae!
+    </p>
+    <ul>
+        <li>I1</li>
+        <li>I2</li>
+        <li>I3</li>
+    </ul>
+  </body>
+</html>

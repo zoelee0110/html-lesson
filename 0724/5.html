@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css상속</title>
+    <style>
+        p {
+            color: chartreuse;
+            border: 1px solid black;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        span {
+            color: blue;
+            border: inherit;
+            font-weight: unset;
+            font-size: initial;
+
+            all: initial;
+            color: rgb(26, 160, 127);
+        }
+    </style>
+  </head>
+  <body>
+    <p>내이릉은 <span>zoelee</span> 이현정</p>
+  </body>
+</html>

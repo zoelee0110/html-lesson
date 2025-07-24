@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>복합선택자</title>
+    <style>
+        /* 자식선택자 딱 걔만*/
+        section > p {
+            border: 1px solid rebeccapurple;
+        }
+        /* 일반형제선택 (앞' 바로 뒤에 나오는 형제 모두) */
+        section ~ p {
+            background-color: gray;
+        }
+        /* 인접형제 (앞' 바로 뒤에 나오는 형제 만!*/
+        section + p {
+            color: aquamarine;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <p>lorem ipsum dolor sit amet</p>
+    <p>lorem ipsum dolor sit amet</p>
+    <p>lorem ipsum dolor sit amet</p>
+        <section>
+            <div>
+                <p>lorem ipsum dolor sit amet</p>
+            </div>
+        <p>lorem ipsum dolor sit amet</p>
+        <p>lorem ipsum dolor sit amet</p>
+        </section>
+    <p>lorem ipsum dolor sit amet</p>
+    <p>lorem ipsum dolor sit amet</p>
+    <p>lorem ipsum dolor sit amet</p>
+  </body>
+</html>

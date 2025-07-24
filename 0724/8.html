@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        /* 후자우선원칙 */
+        p {color: antiquewhite;
+        color: blue;}
+        /* 구체성의 원칙 */
+        .text {
+            color: pink;
+        }
+        .text-cont .text {
+            color: blueviolet;
+        }
+        /* 컨테이너만 쓰면 0점 */
+        #container {
+            color: chocolate;
+        }
+    
+    </style>
+  </head>
+  <body>
+    <p>hello hi</p>
+    <div id="container" class="text-cont">
+            <p class="text">
+                안녕하쇼
+            </p>
+    </div>
+  </body>
+</html>

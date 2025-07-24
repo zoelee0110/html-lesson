@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가중치 계산해보기</title>
+    <style>
+        /* 클래스 + 유형 선택자 */
+        /* 구체 : 클래스 10점 + 타입선택 1점 =11 */
+        /* 총점은 타입보다 낮지만 복합이 두개되어있고 객단가가 높아서 폰트컬러win */        
+        .ul a {
+        color: yellow;
+        }
+        
+        /* 클래스 선택자 */
+        /* 구체 : 클래스 10점 =10*/
+        /* 총점은 아래보다 낮지만 객단가가 높아서 백그라운드win */
+        .click {
+        color: green;
+        background: black;
+        }
+        
+        /* 유형 선택자 */
+        /* 구체 : 타입선택 1점 x 12 =12 */
+        /* 총점은 높지만 객단가가 낮아서 진다. */
+        /* 다만 !imp를 적용하면 무조건 1순위가 된다 */
+        html body main section article div ul li p strong span a {
+        background: purple !important;
+        color: blue;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+  <section>
+    <article>
+      <div>
+        <ul class="ul">
+          <li>
+            <p>
+              <strong>
+                <span>
+                  <a href="#" class="click">
+                    1. 이 글자는 어떤 색일까요? 2. 배경색은 어떤 색일까요?
+                  </a>
+                </span>
+              </strong>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </section>
+</main>
+  </body>
+</html>
