@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상클래스 선택자</title>
+    <style>
+        .naver:link {
+            /* 방문x */
+            color: brown;
+        }
+        .naver:visited {
+            /* 방문O */
+            color: rebeccapurple;
+        }
+        button {
+            padding: 6px 4px;
+            background-color: aquamarine;
+            border: 1px solid greenyellow;
+        }
+        button:hover {
+            background-color: blue;
+        }
+        button:active {
+            background-color: red;
+        }
+        input:focus {
+            outline: none;
+            border-color: pink;
+        }
+        p {
+            border: 2px solid palevioletred;
+        }
+        /* 비포 에프터는 가상요소. 의미없는 택스트 (> |)이런거쓸때 쓴다. */
+        .content::before {
+            content: "앞에";
+            display: block;
+            border: aqua;
+            width: 10px;
+
+        }
+        .content::after {
+            content: "뒤에";
+        }
+        .list li {
+            list-style: none;
+        }
+        .list li::marker{
+            content: "🎃";
+        }
+        .list li::before {
+            content: "🎃";
+        }
+    </style>
+  </head>
+  <body>
+    <a class="naver" href="http://naver.com">네이버 바로가기</a>
+
+    <button>버튼을 눌러보셔</button>
+    <div>
+        <input type="text" class="focus">
+        <input type="text" class="focus">
+        <input type="text" class="focus">
+    </div>
+
+    <p class="content">rlsleellfldlgld</p>
+
+    <ul class="list">
+        <li>일번</li>
+        <li>이번</li>
+    </ul>
+  </body>
+</html>

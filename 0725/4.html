@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        @counter-style emoji {
+            system: cyclic ;
+            symbols: "🎆""🎇""✨""🎡""🎠" ;
+            suffix: "-" ;
+        }
+        ul {
+            list-style-type: decimal;
+            background-color: aquamarine;
+            width: 25vw;
+            list-style-type: emoji;
+            /* 후자우선원칙 */
+        }
+        ol {
+            list-style-position: outside;
+            list-style-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' height='20' width='20' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><polyline points='20 6 9 17 4 12'></polyline></svg>"););
+        }
+        ul li {
+            border: 1px solid rebeccapurple;
+        }
+    </style>
+  </head>
+  <body>
+    <ul>
+        <!--li{item $}*5-->
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
+    <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ol>
+  </body>
+</html>

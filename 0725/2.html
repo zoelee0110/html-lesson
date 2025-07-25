@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        .normal-line-height {
+            line-height: normal;
+            word-break: normal;
+        }
+        p .increased-line-height {
+        line-height: 1.5;
+            span {
+                font-size: 20px;
+            }
+        }
+        .normal-spacing {
+            letter-spacing: normal;
+        }
+        .wide-spacing {
+            letter-spacing: 0.3em;
+        }
+        .narrow-spacing {
+            letter-spacing: -0.2em;
+        }
+    </style>
+  </head>
+  <body>
+    <p class="normal-line-height">
+        Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Earum, ullam deserunt soluta itaque cumque unde, fugit aut velit labore ea quo amet eum, blanditiis sunt beatae ipsum ab. Amet, saepe.
+    </p>
+    <p class="increased-line-height">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti obcaecati molestias, harum atque laudantium doloribus voluptas esse exercitationem vel totam sint provident, asperiores in quo eius soluta tempora alias ipsum.
+    </p>
+    <span>비교할 문장</span>
+
+    <p class="normal-spacing">가나다라마</p>
+    <p class="wide-spacing">가나다라마</p>
+    <p class="narrow-spacing">가나다라마</p>
+  </body>
+</html>
