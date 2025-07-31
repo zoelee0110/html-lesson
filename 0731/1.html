@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>디스플레이속성</title>
+    <style>
+        span {
+            background-color: aqua;
+            border: 1px solid red;
+            width: 300px;
+            height: 100px;
+            margin: 30px;
+            padding: 20px;
+        }
+        div {
+            background-color: violet;
+            width: 300px;
+            height: 100px;
+            margin: 30px;
+            padding: 20px;
+        }
+        /* 블락은 요소끼리 줄바꿔 */
+        .block {
+            display: block;
+        }
+        /* 인라인은 줄바꿈없는 인라인상자, 인라인이라 꾸밈안돼 */
+        .inline {
+            display: inline;
+        }
+        /* 인라인처럼 한줄, 블락처럼 꾸밈값적용가능 */
+        .inline-block {
+            background-color: beige;
+            display: inline-block;
+        }
+        /* 플랙스는 1차원적인 배열 */
+        .flex-container {
+            display: flex;
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            background-color: yellowgreen;
+        }
+        /* 그리드 이차ㅝㄴ적 배열 */
+        .grid-container .item {
+            background-color: blueviolet;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        /* 요소가 보이지않게 설정하는것 */
+        /* 접근성에서도 */
+        .hidden {
+            background-color: cadetblue;
+            display: none;
+        }
+    </style>
+  </head>
+  <body>
+    <span class="block"> 이것은 디스플레이 블락 </span>
+    <span class="block"> 이것은 디스플레이 블락 </span>
+    <span class="inline"> 이것은 디스플레이 인라인 </span>
+    <span class="inline"> 이것은 디스플레이 인라인 </span>
+
+    <div class="block"> 이것은 디스플레이 블락 </div>
+    <div class="block"> 이것은 디스플레이 블락 </div>
+    <div class="inline"> 이것은 디스플레이 인라인 </div>
+    <div class="inline"> 이것은 디스플레이 인라인 </div>
+
+    <div class="inline-block">이것은 디스플레이 인라인 블럭</div>
+    <span class="inline-block">이것은 디스플레이 인라인 블럭</span>
+
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <div class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sunt corporis fugit, harum dolore delectus optio soluta quae autem, repudiandae magni repellendus reiciendis, non perferendis aliquid! Suscipit explicabo omnis id.</div>
+</body>
+</html>

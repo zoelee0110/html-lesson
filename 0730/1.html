@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>복습</title>
+    <style>
+        .box, .text {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid red;
+            /* 인라인 요소는 아래 위드 하잇값 적용안됨 */
+            width: 300px;
+            height: 100px;
+        }
+        .width {
+            background-color: yellow;
+            width: 300px;
+        }
+        .auto { */
+            width: auto;
+            border: 2px solid rebeccapurple;
+        }
+        .min {
+            width: min-content;
+        }
+        .max {
+            width: max-content;
+        }
+        .fit {
+            width: fit-content;
+        }
+        .units {
+            width: 200px;
+            width: 80%;
+            width: 50vw;
+        }
+        .height {
+            background-color: brown;
+        }
+        .child {
+            background-color: aqua;
+            height: 50px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">안녕하쇼</div>
+    <span class="text">안녕하쇼</span>
+
+    <div class="width auuto">오토 속성 활용</div>
+    <div class="width min">민컨텐츠 속성</div>
+    <div class="width max">맥스 컨텐츠 속성</div>
+    <div class="width fit">핏컨텐츠 속성</div>
+    <div>
+    <width class="unit">단위사용요소</width>
+
+    <div class="height">
+        1
+        <div class="child">2</div>
+    </div>
+
+  </body>
+</html>

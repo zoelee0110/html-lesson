@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>버튼실습</title>
+    <style>
+    /* normal */
+        .normal button {
+            color: #cbd5df;
+            background-color: #343F50;
+            display: block;
+            margin-bottom: 10px;
+            color: #cbd5df;
+        }
+        .normal .disable {
+            color: #4a4468;
+        }
+        /* 가상선택자 */
+        .normal .hover:hover, .normal .active:active {
+            color: #fff;
+            text-decoration: underline;
+        }
+    /* positive */
+        .positive button {
+            color: #439aff;
+            background-color: #343F50;
+            display: block;
+            margin-bottom: 10px;
+        }
+        /* 가상선택자 */
+        .positive .hover:hover, .positive .active:active {
+            color: #fff;
+            background: #439aff;
+            text-decoration: underline;
+        }
+    /* negative */
+        .negative button {
+            color: #eb5757;
+            background-color: #343F50;
+            display: block;
+            margin-bottom: 10px;
+        }
+        /* 가상선택자 */
+        .negative .hover:hover, .negative .active:active {
+            color: #fff;
+            background: #eb5757;
+            text-decoration: underline;
+        }
+    /* 그림자 */
+        .default {
+            box-shadow: 1px 1px 1px 1px rgba(255,255,255,0.1);
+        }
+        .hover {
+            box-shadow: 1px 1px 1px 1px rgba(255,255,0.2);
+        }
+        .active {
+            box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+        }
+        
+
+    </style>
+  </head>
+  <body>
+    <!-- normal 버튼 -->
+    <div class="normal">
+    <button class="default">button</button>
+    <button class="hover">button</button>
+    <button class="active">button</button>
+    <button class="disable" disabled>button</button>
+    </div>
+    <!-- positive 버튼 -->
+    <div class="positive">
+    <button class="default">yes</button>
+    <button class="hover">yes</button>
+    <button class="active">yes</button>
+    </div>
+    <!-- negative 버튼 -->
+    <div class="negative">
+    <button class="default">del</button>
+    <button class="hover">del</button>
+    <button class="active">del</button>
+    </div>
+  </body>
+</html>

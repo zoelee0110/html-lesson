@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        .box {
+            border: 2px solid black;
+            height: 50vh;
+            /* css에서 이미지를 쓰는건 요소가아니라 꾸미는 용도 */
+            background: royalblue 
+            url("./weniv-wade.png") 
+            no-repeat
+            center / cover
+            /* position / size 순서 필 */
+            /* 사이즈에서 커버는 꽉차게, 컨테인은 비율에 맞는 큰크기 */
+            ;
+
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <img src="./weniv-wade.png" alt="">
+    <!-- 이건 이미지를 html요소로 쓰는것 (내용으로) -->
+  </body>
+</html>
