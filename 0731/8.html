@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 600px;
+            margin: 20px auto;
+            gap: 10px;
+            margin-bottom: 500px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+            border: 1px solid black;
+        }
+        .pink {
+            background-color: pink;
+
+            /* 스테틱은 고정 */
+            position: static;
+            /* 릴레티브는 특정공간만 이동 우선순위는 좌상이 가장높다 
+            top>bottom , left>right */
+            /* 주변 레이아웃은 유지 나만 이동한다 */
+            top: 10px;
+            left: 20px;
+            position: relative;
+            /* 스티키는 스크롤에 따라 릴레이티브나 픽스드처럼 됨 (네비게이션) */
+            inset: initial;
+            position: sticky;
+            top: 0px;
+
+        }
+        .baby {
+            background-color: teal;
+            width: 100px;
+            height: 100px;
+
+            /* 엡솔루트는 조상 중 스테틱이 아닌 것을 기준으로 움직인다
+            지금은 릴레이티브 따라가슨데, 다 스테틱이면 html에 따라 간다
+            텍스트 배치도 엡솔류투 쓰면 순서가 바뀐다 */
+            /* 가로세로 크기가 지정안되어있으면 top left속성 모두 나타난다 */
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            /* 인셋은 네 면 모두 */
+            inset: 10px;
+
+            /* 픽스드 : 뷰포트 기준 고정 스크롤해도 그위치 그대로 */
+            position: fixed;
+            inset: initial;
+            top: 10px;
+            left: 10px;
+
+            
+        }
+        </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box pink">
+        5
+        <div class="baby">child</div>
+        텍스트
+      </div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+  </body>
+</html>

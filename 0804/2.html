@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        .item {
+            background-color: aquamarine;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            background-color: #ccc;
+            min-height: 30vh;
+
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        /* flex basis  디렉션이 콜롬일때는 세로, 로우일때는 가로 사이즈 */
+        .item:nth-child(1) {
+            flex-basis: 100px;
+        }
+        .item:nth-child(3) {
+            flex-basis: 10rem;
+        }
+
+        /* grow는 남아있는 화면 비율만큼의 배수로 나눠짐, 내용과 상관없이 동일한크기는 1 */
+        .item:nth-child(2) {
+            flex-grow: 1;
+        }
+        .item:nth-child(4) {
+            flex-grow: 2;
+            align-self: stretch;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </body>
+</html>

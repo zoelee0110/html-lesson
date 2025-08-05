@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        .parents {
+            margin: auto;
+            background-color: beige;
+            width: 50vw;
+            height: 50vh;
+            position: relative;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+            position: absolute;
+        }
+        .box.red {
+            top: 40px;
+            left: 40px;
+            background-color: rgba(255,0,0,0.5);
+
+            z-index: 10;
+        }
+        .box.green {
+            top: 80px;
+            left: 80px;
+            background-color: rgba(0,255,0,0.5);
+        }
+        .box.blue {
+            top: 120px;
+            left: 120px;
+            background-color: rgba(0,0,255,0.5);
+
+            /* 음수는 부모 뒤로, 단 부모가 오토인 경우만 */
+            /* z-index: -10; */
+        }
+
+        .box.ques {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0,255,255,0.5);
+            top: 20px;
+            left: 20px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="parents">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+    <div class="box ques">이거슨</div>
+  </body>
+</html>

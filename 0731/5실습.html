@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지실습</title>
+    <style>
+        /* 레디오 방식 */
+        
+        .asp-rat {
+            width: 200px;
+            aspect-ratio: 1/1;
+            object-fit:cover;
+            vertical-align: top;
+        }
+        .asp-rat2 {
+            width: 200px;
+            aspect-ratio: 2/1;
+            object-fit:cover;
+            vertical-align: top;
+        }
+        /* 패딩탑 방식 */
+        .pad-top {
+            width: 30%;
+            padding-top 30%;
+            position: relative;
+            height: 0;
+            display: inline-block;
+        }
+        .pad-top2 {
+            width: 30%;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    </style>
+  </head>
+  <body>
+    <h2>aspect ratio방식</h2>
+    <div>
+        <img class="asp-rat" src="../0730/weniv-binky.png" alt="">
+        <img class="asp-rat" src="../0730/weniv-chilli.png" alt="">
+    </div>
+    <div>
+        <img class="asp-rat2" src="../0730/weniv-licat.png" alt="">
+        <img class="asp-rat2" src="../0730/weniv-suri.png" alt="">
+    </div>
+
+    <h2>padding-top방식</h2>
+    
+    <!-- 1:1비육 -->
+        <div><img class="pad-top" src="../0730/weniv-binky.png" alt=""></div>
+        <div><img class="pad-top" src="../0730/weniv-chilli.png" alt=""></div>
+        <div><img class="pad-top" src="../0730/weniv-garry.png" alt=""></div>
+        <div><img class="pad-top" src="../0730/weniv-licat.png" alt=""></div>
+        <div><img class="pad-top" src="../0730/weniv-suri.png" alt=""></div>
+        <div><img class="pad-top" src="../0730/weniv-wade.png" alt=""></div>
+    
+    <!-- 2:1비율 -->
+    
+        <div><img class="pad-top2" src="../0730/weniv-binky.png" alt=""></div>
+        <div><img class="pad-top2" src="../0730/weniv-chilli.png" alt=""></div>
+        <div><img class="pad-top2" src="../0730/weniv-garry.png" alt=""></div>
+        <div><img class="pad-top2" src="../0730/weniv-licat.png" alt=""></div>
+        <div><img class="pad-top2" src="../0730/weniv-suri.png" alt=""></div>
+        <div><img class="pad-top2" src="../0730/weniv-wade.png" alt=""></div>
+    
+  </body>
+</html>

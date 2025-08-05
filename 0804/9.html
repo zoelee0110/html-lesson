@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        .focus-btn:focus {
+            background-color: aquamarine;
+        }
+        .focus-visible-btn:focus-visible {
+            /* 키보드로 포커싱되었을때만 적용, 마우스나 터치는 안됨 */
+            background-color: violet;
+        }
+
+        .login-form {
+            border: 1px solid black;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .login-form:focus-within {
+            /* 위딘은 자식요소에 포커싱되는경우 */
+            background-color: gray;
+        }
+
+    .login-btn {
+        background-color: antiquewhite;
+        color: blue;
+    }
+    .login-btn:disabled {
+        color: yellow;
+    }
+
+    label:has(+ input:required) {
+        color: red;
+        &::after {content: "*";}
+    }
+    .state-check-input {
+        
+    }
+
+    </style>
+  </head>
+  <body>
+    <button class="focus-btn">focus</button>
+    <button class="focus-visible-btn">focus-visible</button>
+
+    <form class="login-form">
+        <label for="email">e-mail</label>
+        <input type="email" name="email" id="email" required>
+        <label for="state-check"><input type="checkbox">로그인 상태 유지</label>
+
+        <button class="login-btn" type="button">로그인</button>
+    </form>
+  </body>
+</html>

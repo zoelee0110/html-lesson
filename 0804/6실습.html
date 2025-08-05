@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+/* 첫번째 컨테이너 */
+      .item {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        /* 글씨를 정렬하기 위한 코드 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        /* 부모에게 그리드 속성을 주는 것 */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+        /* 컨텐츠를 가운데 정렬 */
+        justify-content: center;
+        /* justify-items: center;
+        align-items: center; */
+        margin: 10px;
+        padding: 10px;
+      }
+/* 두번째 컨테이너 */
+      .item2 {
+        background-color: yellowgreen;
+        height: auto;
+        width: auto;
+        /* 글씨를 정렬하기 위한 코드 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(50px, 1fr) 2fr 3fr;
+        gap: 20px 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+      <div class="item">11</div>
+      <div class="item">12</div>
+    </div>
+    <div class="container2">
+      <div class="item2">1</div>
+      <div class="item2">2</div>
+      <div class="item2">3</div>
+      <div class="item2">4</div>
+      <div class="item2">5</div>
+      <div class="item2">6</div>
+      <div class="item2">7</div>
+      <div class="item2">8</div>
+      <div class="item2">9</div>
+    </div>
+  </body>
+</html>
